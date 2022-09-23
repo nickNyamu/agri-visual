@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\produceController;
 use App\Http\Controllers\regionController;
+use App\Http\Controllers\populationController;
 
 /*
 |--------------------------------------------------------------------------

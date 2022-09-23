@@ -19,7 +19,7 @@
                         <label for="county" class="form-label">County</label>
                         <select class="form-select form-select-sm" name="county" id="county">
                             @foreach ($regions as $region)
-                                <option value="{{ $region->county }}">{{ $region->county }}</option>  
+                                <option value="{{ $region->id }}">{{ $region->county }}</option>  
                             @endforeach
                         </select>
                         <span class="text-danger">@error('role'){{ $message }}@enderror</span>
@@ -28,13 +28,31 @@
                     <label for="sCode" class="form-label">Population</label>
                     <input type="text" name="population" class="form-control" placeholder="1,000,000" >
                 </div>
-                <div class="form-group ml-3 mr-3">
+                <div class="form-group ml-3 mr-5">
                     <label for="year" class="form-label">Year</label>
-                    <input type="number" class="form-control"  placeholder="YYYY" min="2010" max="2040">
+                    <div class="col-lg-6">
+                        <div class="input-group date" id="datepicker">
+                          <input type="text" class="form-control" id="date"/>
+                          <span class="input-group-append">
+                            <span class="input-group-text bg-light d-block">
+                              <i class="fa fa-calendar"></i>
+                            </span>
+                          </span>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(function () {
+                            $('#datepicker').Datepicker({
+                                viewMode: 'years',
+                                format: 'MM/YYYY'
+                            });
+                        });
+                     </script>
+                   <!-- <input type="number" class="form-control"  placeholder="YYYY" min="2010" max="2040">
                     <script>
                        document.querySelector("input[type=number]")
                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
-                    </script>
+                    </script>-->
                 </div>
                 <div class="col-12 d-flex justify-content-center mb-4">
                    <button type="submit" class="btn btn-primary col-md-3">Add Population</button>
