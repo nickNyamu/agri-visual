@@ -54,8 +54,11 @@
                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
                     </script>-->
                 </div>
+                <div class="form-group">
+                    <input type="datepicker">
+                </div>
                 <div class="col-12 d-flex justify-content-center mb-4">
-                   <button type="submit" class="btn btn-primary col-md-3">Add Population</button>
+                   <button type="submit" class="btn btn-primary col-md-4">Add Population</button>
                </div>
             </form>
         </div>

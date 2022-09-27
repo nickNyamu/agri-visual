@@ -70,7 +70,7 @@
                    <div class="col-md-6">
                        <label for="role" class="form-label">Role</label>
                    <select class="form-select form-select-sm" name="role" id="role" value="{{ old ('role')}}">
-                    <option selected>{{ $user['role'] }}</option>
+                   
                        <option>Admin</option>
                        <option>Manager</option>
                        </select>

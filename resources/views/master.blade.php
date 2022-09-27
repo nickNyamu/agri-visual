@@ -103,7 +103,7 @@
                             <span class="tooltip">Home</span>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{ route('user.analytics') }}">
                             <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Analytics</span>
                             </a>

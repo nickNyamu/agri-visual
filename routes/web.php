@@ -49,6 +49,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::post('/logout', [UserController::class, 'logout'])->name('logout');
         Route::view('/adduser', 'users')->name('adduser');
         Route::view('/addproduce', 'produce')->name('addproduce');
+        Route::view('/analytics', 'analytics')->name('analytics');
         Route::get('/viewUser', [UserController::class, 'showUsers'])->name('viewUser');
         Route::post('/createUser', [UserController::class, 'create'])->name('createUser');
         Route::view('/addregion', 'region')->name('addregion');
