@@ -32,11 +32,11 @@ class regionController extends Controller
     function update(Request $request){
         $region = Region::find($request->id);
 
-        $region->county = $request->name;
+        $region->county = $request->county;
         $region->area = $request->area;
-        $produce->save();
+        $region->save();
 
-        return redirect()->route('');
+        return redirect()->route('user.viewRegion');
     }
     function delete($id){
         $region = Region::find($id);

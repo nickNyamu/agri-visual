@@ -28,7 +28,7 @@
                 <div class="form-group ml-3 mr-3 mb-3">
                     <label for="units" class="form-label">Units</label>
                     <select class="form-select form-select-sm" name="units" id="category">  
-                        <option value="Crop">km2</option>
+                        <option value="km2">km2</option>
                         </select>
                     </div>
 

@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('content')
- <div>
+ <div class="vertical-scrollable">
     <legend class="fs-2 ml-4 mt-3">Regions</legend>
     <ul class=" user nav mr-5">
       <li class="nav-item">
@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ ++$i }}</td>
                     <td>{{ $region->county }}</td>
-                    <td>{{ $region->area }}</td>
+                    <td>{{ $region->area}} {{ $region ->units }}</td>
                     <td>
                         <a href="{{ "editRegion/".$region['id'] }}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                         <a href="{{ "deleteRegion/".$region['id'] }}" class="btn btn-danger"><i class="fa fa-times"></i></a>

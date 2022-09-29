@@ -2,7 +2,7 @@
 
 @section('content')
  <div>
-    <legend class="fs-2 ml-4 mt-3">Users</legend>
+    <legend class="fs-2 ml-4 mt-3">View Produce</legend>
     <ul class=" user nav mr-5">
       <li class="nav-item">
         <a class="nav-link" href="{{ route('user.addproduce')}}">Add Produce</a>

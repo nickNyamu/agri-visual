@@ -41,14 +41,14 @@
                 @if(Auth::user()->role == 'Manager')
                     <ul class="nav_list">
                         <li>
-                            <a href="">
+                            <a href="{{ route('user.home') }}">
                             <i class='bx bx-home' ></i>
                             <span class="links_name">Home</span>
                             </a>
                             <span class="tooltip">Home</span>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{ route('user.analytics') }}">
                             <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Analytics</span>
                             </a>
@@ -76,6 +76,13 @@
                             <span class="tooltip">Population</span>
                         </li>
                         <li>
+                            <a href=" ">
+                                <i class='bx bx-data'></i>
+                            <span class="links_name">Production</span>
+                            </a>
+                            <span class="tooltip">Production</span>
+                        </li>
+                        <li>
                             <a href="">
                             <i class='bx bx-bar-chart' ></i>
                             <span class="links_name">Reports</span>
@@ -96,7 +103,7 @@
                     @if(Auth::user()->role == 'Admin')
                     <ul class="nav_list">
                         <li>
-                            <a href="">
+                            <a href="{{ route('user.home') }}">
                             <i class='bx bx-home' ></i>
                             <span class="links_name">Home</span>
                             </a>
@@ -132,10 +139,17 @@
                         </li>
                         <li>
                             <a href="{{ route('user.addpopulation') }}">
-                            <i class='bx bx-user'></i>
+                                <i class='bx bxs-city'></i>
                             <span class="links_name">Population</span>
                             </a>
                             <span class="tooltip">Population</span>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <i class='bx bx-data'></i>
+                            <span class="links_name">Production</span>
+                            </a>
+                            <span class="tooltip">Production</span>
                         </li>
                         <li>
                             <a href="">

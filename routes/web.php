@@ -45,8 +45,9 @@ Route::prefix('user')->name('user.')->group(function(){
     });
 
     Route::middleware(['auth:web', 'PreventBackHistory'])->group(function(){
-        Route::view('/dashboard', 'layout.dashboard')->name('dashboard');
+        Route::view('/dashboard', 'dashboard')->name('dashboard');
         Route::post('/logout', [UserController::class, 'logout'])->name('logout');
+        Route::view('/home', 'dashboard')->name('home');
         Route::view('/adduser', 'users')->name('adduser');
         Route::view('/addproduce', 'produce')->name('addproduce');
         Route::view('/analytics', 'analytics')->name('analytics');

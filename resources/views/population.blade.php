@@ -29,7 +29,7 @@
                     <input type="text" name="population" class="form-control" placeholder="1,000,000" >
                 </div>
                 <div class="form-group ml-3 mr-5">
-                    <label for="year" class="form-label">Year</label>
+                    <label for="year" class="form-label">Date</label>
                     <div class="col-lg-6">
                         <div class="input-group date" id="datepicker">
                           <input type="text" class="form-control" id="date"/>
@@ -54,9 +54,7 @@
                        .oninput = e => console.log(new Date(e.target.valueAsNumber, 0, 1))
                     </script>-->
                 </div>
-                <div class="form-group">
-                    <input type="datepicker">
-                </div>
+
                 <div class="col-12 d-flex justify-content-center mb-4">
                    <button type="submit" class="btn btn-primary col-md-4">Add Population</button>
                </div>

@@ -45,8 +45,8 @@ class UserController extends Controller
         $user->lname = $request->lname;
         $user->email = $request->email;
         $user->nationalID = $request->nationalID;
-        $user->phone = $request->phone;
         $user->county = $request->county;
+        $user->phone = $request->phone;
         $user->role = $request->role;
         $user->save();
 
