@@ -12,15 +12,7 @@ use Illuminate\Support\Facades\Hash;
 
 class Region extends Model
 {
-   /* use HasApiTokens, HasFactory, Notifiable;*/
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
-    protected $fillable = [
-       
+    protected $fillable = [   
         'county',
         'area',
         'units',

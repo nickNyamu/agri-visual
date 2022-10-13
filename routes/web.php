@@ -5,6 +5,8 @@ use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\produceController;
 use App\Http\Controllers\regionController;
 use App\Http\Controllers\populationController;
+use App\Http\Controllers\productionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,7 +56,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/viewUser', [UserController::class, 'showUsers'])->name('viewUser');
         Route::post('/createUser', [UserController::class, 'create'])->name('createUser');
         Route::view('/addregion', 'region')->name('addregion');
-        Route::get('/addpopulation', [regionController::class, 'pullRegion'])->name('addpopulation');
+        Route::get('/addPopulation', [regionController::class, 'pullRegion'])->name('addPopulation');
         Route::get('/edituser/{id}', [UserController::class, 'edit'])->name('edituser');
         Route::post('/updateuser', [UserController::class, 'update'])->name('updateuser');
         Route::get('/deleteuser/{id}', [UserController::class, 'delete'])->name('deleteuser');
@@ -68,6 +70,13 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/viewRegion', [regionController::class, 'showRegion'])->name('viewRegion');
         Route::post('/updateRegion', [regionController::class, 'update'])->name('updateRegion');
         Route::get('/deleteRegion/{id}', [regionController::class, 'delete'])->name('deleteRegion');
+        Route::post('/createPopulation', [populationController::class, 'create'])->name('createPopulation');
+        Route::get('/viewPopulation', [populationController::class, 'showPopulation'])->name('viewPopulation');
+        Route::get('/editPopulation/{id}', [populationController::class, 'edit'])->name('editPopulation');
+        Route::post('/updatePopulation', [populationController::class, 'update'])->name('updatePopulation');
+        Route::get('/deletePopulation/{id}', [populationController::class, 'delete'])->name('deletePopulation');
+        Route::get('/addProduction', [productionController::class, 'create'])->name('addProduction');
+        Route::get('/viewProduction', [productionController::class, 'viewProduction'])->name('viewProduction');
 
 
     });

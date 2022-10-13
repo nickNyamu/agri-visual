@@ -15,8 +15,6 @@ class population extends Model
      * @var array<int, string>
      */
     protected $fillable = [
-       
-        'id',
         'region_id',
         'population',
         'year',
