@@ -14,15 +14,21 @@
            <div class="justify-content-center d-flex">
                <h3 class="sm-display-5">Production Details</h3>
            </div>
-            <form action="" method="POST">
+            <form action="{{ route('user.createProduction')}}" method="POST">
                 @csrf
                 <div class="form-group ml-3 mr-3">
-                    <label for="produceName" class="form-label">Produce ID</label>
-                    <input type="text" name="produce" class="form-control" placeholder="e.g Millet" value="{{ old ('produce')}}">
-                    <span class="text-danger">@error('name'){{ $message }}@enderror</span>
-                </div>
+                    <label for="produceName" class="form-label">Produce</label>
+                    <select class="form-select form-select-sm" name="produce_id" id="county" value="{{ old ('produce_id')}}">
+                        <option selected>--Choose Produce--</option>
+                        @foreach ($produces as $produce)
+                            
+                            <option value="{{ $produce->id }}">{{ $produce->name }}</option>  
+                        @endforeach
+                    </select>
+                    <span class="text-danger">@error('produce_id'){{ $message }}@enderror</span>
+            </div>
                 <div class="form-group ml-3 mr-3">
-                    <label for="description" class="form-label">Region ID</label>
+                    <label for="description" class="form-label">Region</label>
                         <select class="form-select form-select-sm" name="region_id" id="county" value="{{ old ('region_id')}}">
                             <option selected>--Choose Region--</option>
                             @foreach ($regions as $region)
@@ -34,8 +40,8 @@
                 </div>
                 <div class="form-group ml-3 mr-3">
                     <label for="description" class="form-label">Quantity</label>
-                    <input type="text" name="description" class="form-control" placeholder="lorem ipsum..." value="{{ old ('description')}}">
-                    <span class="text-danger">@error('description'){{ $message }}@enderror</span>
+                    <input type="text" name="quantity" class="form-control" placeholder="250000" value="{{ old ('quantity')}}">
+                    <span class="text-danger">@error('quantity'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group ml-3 mr-3 mb-3">
                     <label for="units" class="form-label">Units</label>
@@ -45,7 +51,7 @@
                     </div>
                 <div class="form-group ml-3 mr-3">    
                     <label for="sCode"  class="form-label">Date</label>
-                    <input type="date" name="year" class="form-control" value="{{ old ('year')}}"> 
+                    <input type="date" name="year" class="form-control" value="{{ old ('Year')}}"> 
                     <span class="text-danger">@error('year'){{ $message }}@enderror</span>   
                 </div>
             </fieldset>

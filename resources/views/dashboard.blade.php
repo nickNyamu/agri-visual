@@ -1,14 +1,49 @@
 @extends('master')
 
 @section('content')
- <h1>Welcome, {{ Auth::user()->Fname }} {{ Auth::user()->Lname }} </h1>
+ <h4 class="pt-2">Welcome, {{ Auth::user()->Fname }} {{ Auth::user()->Lname }} </h4>
 
    @if (Auth::user()->role == 'Manager')
       <p>this is managers text</p>
       
    @endif
+
+
    @if (Auth::user()->role == 'Admin')
-   <p>this is admins text</p>
+   <div class="main">
+
+      <h5>Dashboard</h5>
+      <div class="cardviews">
+            <div class="val-box">
+               <i class="fas fa-users"></i>
+                  <div>
+                     <h3>8,267</h3>
+                     <span>New Users</span>
+                  </div>
+            </div>
+            <div class="val-box">
+               <i class="fas fa-users"></i>
+                  <div>
+                     <h3>8,267</h3>
+                     <span>New Users</span>
+                  </div>
+            </div>
+            <div class="val-box">
+               <i class="fas fa-users"></i>
+                  <div>
+                     <h3>8,267</h3>
+                     <span>New Users</span>
+                  </div>
+            </div>
+            <div class="val-box">
+               <i class="fas fa-users"></i>
+                  <div>
+                     <h3>8,267</h3>
+                     <span>New Users</span>
+                  </div>
+            </div>
+      </div>
+   </div>
    
    @endif
 @endsection

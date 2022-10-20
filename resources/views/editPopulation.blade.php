@@ -19,9 +19,9 @@
                 <div class="form-group ml-3 mr-3">
                         <label for="county" class="form-label">County</label>
                         <select class="form-select form-select-sm" name="region_id" id="county" value="{{ $population['region_id'] }}">
-                        <option selected>{{ $county}}</option>
+                        <option selected>{{ $county }}</option>
                             @foreach ($regions as $region)
-                                <option value="{{ $region->id }}">{{ $region->county }}</option>  
+                                <option value="{{ $region->id }}" selected>{{ $region->county }}</option>  
                             @endforeach
                         </select>
                         <span class="text-danger">@error('region_id'){{ $message }}@enderror</span>

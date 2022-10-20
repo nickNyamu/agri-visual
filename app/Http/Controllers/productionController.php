@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Production;
 use Illuminate\Http\Request;
+use App\Models\Produce;
 use App\Models\Region;
 use Illuminate\Support\Facades\DB;
 
 class productionController extends Controller
 {   
-    function create(Request $request){
+    function pullData(){
+        $produces = Produce::all();
         $regions = Region::all();
-        
+        return view('production', compact('produces', 'regions'));
+    }
+
+    function create(Request $request){     
         $request -> validate([
             'produce_id' => 'required',
             'region_id' => 'required',
@@ -19,24 +24,32 @@ class productionController extends Controller
             'units' => 'required',
             'year' => 'required',
         ]);
-        
-        Population::create($request->all());
-
+        Production::create($request->all()); 
        
-
-        return redirect()->route('user.addProduction', compact('regions'));
+        return redirect()->route('user.addProduction');
     }
 
     function viewProduction(){
         $productions = DB::table('productions')
+                     ->select('productions.*', 'produces.name as Produce','regions.county as Region')
+                    ->leftjoin('produces', 'produces.id', '=', 'productions.produce_id')
+                    ->leftjoin('regions', 'regions.id', '=', 'productions.region_id')
+                    ->get(); 
+      
+        return view('viewProduction', compact('productions')) ->with('i', (request()->input('page', 1) -1) *5);
+        /*
+          $productions = DB::table('productions')
                     ->join('produces', 'produces.id', '=', 'productions.produce_id')
                     ->join('regions', 'regions.id', '=', 'productions.region_id')
-                    ->select('regions.county as Region', 'produces.name as Produce', 'productions.quantity as Quantity', 'productions.units as Unit', 'productions.year as Year')
-                    ->get();
+                    ->select('produces.name as Produce', 'regions.county as Region', 'productions.quantity as Quantity', 'productions.units as Unit', 'productions.year as Year')
+                    ->get(); 
         
-    
-        return $productions;
-
-        return view('viewProduction');
+        return view('viewProduction', compact('productions')) ->with('i', (request()->input('page', 1) -1) *5);*/
     } 
+
+      function delete($id){
+        $production = Production::find($id);
+        $production->delete();
+        return redirect()->route('user.viewProduction');
+    }
 }

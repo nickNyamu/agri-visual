@@ -9,6 +9,8 @@ class Production extends Model
 {
     protected $fillable = [
         'id',
+        'produce_id',
+        'region_id',
         'quantity',
         'units',
         'year',

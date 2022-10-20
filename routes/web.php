@@ -75,8 +75,10 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/editPopulation/{id}', [populationController::class, 'edit'])->name('editPopulation');
         Route::post('/updatePopulation', [populationController::class, 'update'])->name('updatePopulation');
         Route::get('/deletePopulation/{id}', [populationController::class, 'delete'])->name('deletePopulation');
-        Route::get('/addProduction', [productionController::class, 'create'])->name('addProduction');
+        Route::get('/addProduction',  [productionController::class, 'pullData'])->name('addProduction');
+        Route::post('/createProduction', [productionController::class, 'create'])->name('createProduction');
         Route::get('/viewProduction', [productionController::class, 'viewProduction'])->name('viewProduction');
+        Route::get('/deleteProduction/{id}', [productionController::class, 'delete'])->name('deleteProduction');
 
 
     });

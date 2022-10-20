@@ -214,3 +214,58 @@ body{
     text-decoration: none;
     
 }
+
+
+
+.main{
+    padding: 20px 20px 20px;
+    font-size:24px;
+    font-weight: 700;
+}
+
+.cardviews{
+    padding: 5px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.cardviews .val-box{
+    background: #fff;
+    width: 300px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.cardviews .val-box i{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    margin-right: 15px;
+}
+.cardviews .val-box:nth-child(1) i{
+    background: chartreuse;
+}
+.cardviews .val-box:nth-child(2) i{
+    background: rgb(253, 237, 12);
+}
+.cardviews .val-box:nth-child(3) i{
+    background: rgb(25, 76, 185);
+}
+.cardviews .val-box:nth-child(4) i{
+    background: rgb(211, 30, 151);
+}
+
+.cardviews .val-box h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+.cardviews .val-box span{
+    font-size: 15px;
+    color: #828997;
+}
