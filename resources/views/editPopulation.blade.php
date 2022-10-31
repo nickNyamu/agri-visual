@@ -6,7 +6,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ route('user.viewPopulation') }}">View Population</a>
     </li>
-  </ul>
+</ul>
 <div class="container-fluid justify-content-center d-flex pt-2">
     <div class="col-3 col-lg-6">
        <div class="card px-0 pb-0 shadow p-3">
@@ -40,10 +40,10 @@
                 
                 <div class="col-12 d-flex justify-content-center mb-4">
                    <button type="submit" class="btn btn-primary col-md-4">Edit Population</button>
-               </div>
+                </div>
             </form>
         </div>
-       </div>
+    </div>
 </div>
 
 @endsection

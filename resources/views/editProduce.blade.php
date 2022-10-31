@@ -23,8 +23,8 @@
                     <span class="text-danger">@error('name'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group ml-3 mr-3">
-                    <label for="description" class="form-label">Description</label>
-                    <input type="text" name="description" class="form-control" placeholder="lorem ipsum..." value="{{ $produce['description'] }}">
+                    <label for="description" class="form-label">Average Consumption Per Person(kg)</label>
+                    <input type="text" name="description" class="form-control" placeholder="0.00- ∞ kg" value="{{ $produce['description'] }}">
                     <span class="text-danger">@error('description'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group ml-3 mr-3 mb-3">

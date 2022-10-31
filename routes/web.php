@@ -6,6 +6,7 @@ use App\Http\Controllers\produceController;
 use App\Http\Controllers\regionController;
 use App\Http\Controllers\populationController;
 use App\Http\Controllers\productionController;
+use App\Http\Controllers\reportsController;
 
 
 /*
@@ -79,6 +80,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::post('/createProduction', [productionController::class, 'create'])->name('createProduction');
         Route::get('/viewProduction', [productionController::class, 'viewProduction'])->name('viewProduction');
         Route::get('/deleteProduction/{id}', [productionController::class, 'delete'])->name('deleteProduction');
+        Route::get('/reports', [reportsController::class, 'reports'])->name('reports');
 
 
     });

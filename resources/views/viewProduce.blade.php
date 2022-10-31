@@ -13,7 +13,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Produce Name</th>
-            <th scope="col">Description</th>
+            <th scope="col">Average consumption/Person(kgs)</th>
             <th scope="col">Category</th>
             <th scope="col">Action</th>
           </tr>
