@@ -53,8 +53,33 @@
             <div class="card-header border-0">
             <h2 class="card-title">Chart</h2>
 
+            <div class="card-body">
+               <div class="position-relative" id="barChart">
+                   {!! $chart->container() !!}
+                   {!! $chart->script() !!}
+               </div>
+           </div>
+
             </div>
          </div>
       </div>
    </div>
+      <div class="row mb -1">
+      <div class="col-lg-6">
+         <div class="card">
+            <div class="card-header border-0">
+            <h2 class="card-title">Chart</h2>
+
+            <div class="card-body">
+               <div class="position-relative" >
+                   {!! $chart->container() !!}
+                   {!! $chart->script() !!}
+               </div>
+           </div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
 @endsection
