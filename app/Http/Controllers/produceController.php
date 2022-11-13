@@ -44,4 +44,6 @@ class produceController extends Controller
         $produce->delete();
         return redirect()->route('user.viewProduce');
     }
+
+    
 }

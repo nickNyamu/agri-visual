@@ -8,35 +8,40 @@ use App\Models\Population;
 use App\Models\Region;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 
 class PopulationController extends Controller
 {
     //
     function create(Request $request){
-        $request -> validate([
+       $request -> validate([
             'region_id' => 'required',
             'population' => 'required',
             'year' => 'required',
         ]);
         
         Population::create($request->all());
+       /* $population = new Population();
+        $population->name = $request->region_id;
+        $population->population = $request->population;
+        $population->year = Carbon::now()->format('Y');
+
+       
+        */
 
         return redirect()->route('user.addPopulation');
     }
+
     function showPopulation(){
         $populations = Population::leftJoin('regions', 'regions.id', '=', 'populations.region_id')
                                  ->select('populations.id','regions.county as County', 'populations.population', 'populations.year')
                                  ->get();
-        
-
-        
-        
+           
         //DB::table('populations')
                 //        ->leftJoin('regions', 'regions.id', '=', 'populations.region_id')
                  //       ->select('regions.county as County', 'population', 'year')
                   //      ->get();
-           
-
+        
         return view('viewPopulation', compact('populations')) ->with('i', (request()->input('page', 1) -1) *5);
     }
     function edit($id){

@@ -8,8 +8,8 @@
         <a class="nav-link" href="{{ route('user.addProduction')}}">Add Production</a>
       </li>
     </ul>
-  <div  class="card-body table-responsive " style="height: 570px;">
-    <table class="table table-head-fixed text-nowrap mt-3">
+ <div  class="card-body table-responsive " style="height: 570px;">
+    <table class="table table-head-fixed text-nowrap mt-3"> 
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -27,7 +27,7 @@
                     <td>{{ ++$i }}</td>
                     <td>{{ $production->Produce }}</td>
                     <td>{{ $production->Region }}</td>
-                    <td>{{ $production->quantity }}{{ $production ->units }}</td>
+                    <td>{{ number_format(floatval($production->quantity)) }}{{ $production ->units }}</td>
                     <td>{{ $production->year }}</td>
                     <td>
                       <a href="{{ url('deleteProduction',$production->id) }}" class="btn btn-danger"><i class="fa fa-times"></i></a>

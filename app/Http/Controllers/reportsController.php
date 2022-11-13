@@ -22,4 +22,14 @@ class reportsController extends Controller
         
         return view('reports');
     }
+
+    function populationReports(Request $request){
+        if($request->ajax()){
+            $populations = DB::table('populations')
+            ->select('populations.*','regions.county as County')
+            ->leftJoin('regions', 'regions.id', '=', 'populations.region_id');
+            return datatables($populations)->make(true);
+        }
+        return view('populationReport');
+    }
 }

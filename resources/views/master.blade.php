@@ -59,6 +59,13 @@
                             <span class="tooltip">Analytics</span>
                         </li>
                         <li>
+                            <a href="{{ route('user.performance') }}">
+                                <i class='bx bxs-cog'></i>
+                            <span class="links_name">Performance</span>
+                            </a>
+                            <span class="tooltip">Performance</span>
+                        </li>
+                        <li>
                             <a href="{{ route('user.addregion') }}">
                             <i class='bx bx-map' ></i>
                             <span class="links_name">Region</span>
@@ -119,6 +126,13 @@
                             <span class="links_name">Analytics</span>
                             </a>
                             <span class="tooltip">Analytics</span>
+                        </li>
+                        <li>
+                            <a href="{{ route('user.performance') }}">
+                                <i class='bx bxs-cog'></i>
+                            <span class="links_name">Performance</span>
+                            </a>
+                            <span class="tooltip">Performance</span>
                         </li>
                         <li>
                             <a href="{{ route('user.addregion') }}">

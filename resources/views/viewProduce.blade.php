@@ -8,7 +8,8 @@
         <a class="nav-link" href="{{ route('user.addproduce')}}">Add Produce</a>
       </li>
     </ul>
-    <table class="table table-hover mt-3">
+    <div  class="card-body table-responsive " style="height: 580px;">
+      <table class="table table-head-fixed text-nowrap"> 
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -34,5 +35,6 @@
             </tbody>
         @endforeach
       </table>
+    </div>
  </div>
 @endsection

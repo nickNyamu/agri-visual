@@ -55,6 +55,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::view('/adduser', 'users')->name('adduser');
         Route::view('/addproduce', 'produce')->name('addproduce');
         Route::view('/analytics', 'analytics')->name('analytics');
+        Route::view('/performance', 'performance')->name('performance');
         Route::get('/viewUser', [UserController::class, 'showUsers'])->name('viewUser');
         Route::post('/createUser', [UserController::class, 'create'])->name('createUser');
         Route::view('/addregion', 'region')->name('addregion');
@@ -74,6 +75,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/deleteRegion/{id}', [regionController::class, 'delete'])->name('deleteRegion');
         Route::post('/createPopulation', [populationController::class, 'create'])->name('createPopulation');
         Route::get('/viewPopulation', [populationController::class, 'showPopulation'])->name('viewPopulation');
+        Route::get('/populationReport', [reportsController::class, 'populationReports'])->name('populationReport');
         Route::get('/editPopulation/{id}', [populationController::class, 'edit'])->name('editPopulation');
         Route::post('/updatePopulation', [populationController::class, 'update'])->name('updatePopulation');
         Route::get('/deletePopulation/{id}', [populationController::class, 'delete'])->name('deletePopulation');

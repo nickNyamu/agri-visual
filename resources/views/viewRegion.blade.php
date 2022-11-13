@@ -54,7 +54,7 @@
                                <tr>
                                    <td>{{ ++$i }}</td>
                                    <td>{{ $region->county }}</td>
-                                   <td>{{ $region->area}} {{ $region ->units }}</td>
+                                   <td>{{ number_format(floatval($region->area))}} {{ $region ->units }}</td>
                                    <td>
                                        <a href="{{ "editRegion/".$region['id'] }}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                        <a href="{{ "deleteRegion/".$region['id'] }}" class="btn btn-danger"><i class="fa fa-times"></i></a>
