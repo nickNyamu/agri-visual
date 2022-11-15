@@ -21,14 +21,7 @@ class PopulationController extends Controller
         ]);
         
         Population::create($request->all());
-       /* $population = new Population();
-        $population->name = $request->region_id;
-        $population->population = $request->population;
-        $population->year = Carbon::now()->format('Y');
-
-       
-        */
-
+        
         return redirect()->route('user.addPopulation');
     }
 

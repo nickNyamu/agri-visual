@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Produce;
+use App\Models\Production;
+use App\Models\Region;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class produceController extends Controller
@@ -45,5 +48,14 @@ class produceController extends Controller
         return redirect()->route('user.viewProduce');
     }
 
-    
+    function multiply(){
+        $multiply = DB::table('productions')
+                    ->select('productions.*', 'produces.name as Produce','regions.county as Region')
+                    ->leftjoin('produces', 'produces.id', '=', 'productions.produce_id')
+                    ->leftjoin('regions', 'regions.id', '=', 'productions.region_id', 'regions.id', '=', 'populations.region_id')
+                    ->get();
+                    
+                return $multiply; 
+            return view('performance');
+    }
 }

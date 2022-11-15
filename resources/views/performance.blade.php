@@ -14,7 +14,8 @@
                     <th>Produce</th>
                     <th>Year</th>
                     <th>Population(People)</th>
-                    <th>Required Quantity(kg)</th>
+                    <th>Required Quantity(kg/Day)</th>
+                    <th>Required Quantity(kg/Year)</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@
                 <td>2020</td>
                 <td>2356445</td>
                 <td>255552352</td>
+                <td>25555236652</td>
             </tbody>
         </table>
         </div>
