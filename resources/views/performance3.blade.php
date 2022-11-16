@@ -9,7 +9,7 @@
         <ul class="user nav ml-3">
           <div>
           <li class="nav-item">
-            <a class="nav-link active" href="{{ route('user.performance') }}"><u>2019</u></a>
+            <a class="nav-link" href="{{ route('user.performance') }}">2019</a>
           </li>
         </div>
         <div>
@@ -19,7 +19,7 @@
         </div>
         <div>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('user.performance2') }}">2021</a>
+              <a class="nav-link" href="{{ route('user.performance2') }}"><u>2021</u></a>
             </li>
           </div>
           <div>
@@ -44,13 +44,13 @@
                 </tr>
             </thead>
             @foreach ($produces as $produce)
-            <tbody> 
-                <td>{{ ++$i }}</td>   
+            <tbody>   
+                <td>{{ ++$i }}</td>  
                 <td>{{ $produce->name }}</td>
-                <td>2019</td>
-                <td>{{  number_format(floatval($year1Sum)) }}</td>
-                <td>{{  number_format(floatval($produce->description *  $year1Sum)) }}</td>
-                <td>{{  number_format(floatval($produce->description *  $year1Sum  * 365))  }}</td>
+                <td>2022</td>
+                <td>{{ number_format(floatval($year4Sum)) }}</td>
+                <td>{{ number_format(floatval($produce->description *  $year4Sum)) }}</td>
+                <td>{{ number_format(floatval($produce->description *  $year4Sum  * 365)) }}</td>
             </tbody>
             @endforeach 
         </table>

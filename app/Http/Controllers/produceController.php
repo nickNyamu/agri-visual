@@ -49,13 +49,28 @@ class produceController extends Controller
     }
 
     function multiply(){
-        $multiply = DB::table('productions')
-                    ->select('productions.*', 'produces.name as Produce','regions.county as Region')
-                    ->leftjoin('produces', 'produces.id', '=', 'productions.produce_id')
-                    ->leftjoin('regions', 'regions.id', '=', 'productions.region_id', 'regions.id', '=', 'populations.region_id')
-                    ->get();
-                    
-                return $multiply; 
-            return view('performance');
+        $year1Sum = DB::table("populations")->where("year",">=","2019-1-1")->where("year","<=","2019-12-31")->sum("population");
+
+        $produces = Produce::All();
+            return view('performance', compact('year1Sum', 'produces'))->with('i', (request()->input('page', 1) -1) *5);
+    }
+    function multiply1(){
+        $year2Sum = DB::table("populations")->where("year",">=","2020-1-1")->where("year","<=","2020-12-31")->sum("population");
+        
+        $produces = Produce::All();
+            return view('performance1', compact('year2Sum','produces'))->with('i', (request()->input('page', 1) -1) *5);
+    }
+    function multiply2(){
+        $year3Sum = DB::table("populations")->where("year",">=","2021-1-1")->where("year","<=","2021-12-31")->sum("population");
+
+        $produces = Produce::All();
+
+            return view('performance2', compact('year3Sum','produces'))->with('i', (request()->input('page', 1) -1) *5);
+    }
+    function multiply3(){
+        $year4Sum = DB::table("populations")->where("year",">=","2022-1-1")->where("year","<=","2022-12-31")->sum("population");
+
+        $produces = Produce::All();
+            return view('performance3', compact('year4Sum','produces'))->with('i', (request()->input('page', 1) -1) *5);
     }
 }
