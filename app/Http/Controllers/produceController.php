@@ -73,4 +73,8 @@ class produceController extends Controller
         $produces = Produce::All();
             return view('performance3', compact('year4Sum','produces'))->with('i', (request()->input('page', 1) -1) *5);
     }
+    function producee(){
+
+        return view('detailedProduction');
+    }
 }

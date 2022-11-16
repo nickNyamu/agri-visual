@@ -28,7 +28,7 @@
             </li>
           </div>
         </ul>
-    
+    </div>
 <div class="row"> 
     <div class="col-12 mt-3">
         <div  class="card-body table-responsive " style="height: 580px;">

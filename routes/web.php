@@ -59,6 +59,7 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/performance1', [produceController::class, 'multiply1'])->name('performance1');
         Route::get('/performance2', [produceController::class, 'multiply2'])->name('performance2');
         Route::get('/performance3', [produceController::class, 'multiply3'])->name('performance3');
+        Route::get('/detailedProduction', [produceController::class, 'producee'])->name('detailedProduction');
         Route::get('/viewUser', [UserController::class, 'showUsers'])->name('viewUser');
         Route::post('/createUser', [UserController::class, 'create'])->name('createUser');
         Route::view('/addregion', 'region')->name('addregion');

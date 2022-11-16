@@ -7,6 +7,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ route('user.addProduction')}}">Add Production</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('user.detailedProduction') }}">Detailed Production</a>
+      </li>
     </ul>
  <div  class="card-body table-responsive " style="height: 570px;">
     <table class="table table-head-fixed text-nowrap mt-3"> 
