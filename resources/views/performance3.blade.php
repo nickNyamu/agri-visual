@@ -19,12 +19,12 @@
         </div>
         <div>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('user.performance2') }}"><u>2021</u></a>
+              <a class="nav-link" href="{{ route('user.performance2') }}">2021</a>
             </li>
           </div>
           <div>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('user.performance3') }}">2022</a>
+              <a class="nav-link" href="{{ route('user.performance3') }}"><u>2022</u></a>
             </li>
           </div>
         </ul>
