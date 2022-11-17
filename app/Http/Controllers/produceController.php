@@ -75,6 +75,13 @@ class produceController extends Controller
     }
     function producee(){
 
+        $productions = DB::table('productions')
+        ->select('productions.*', 'produces.name as Produce')
+       ->leftjoin('produces', 'produces.id', '=', 'productions.produce_id')
+       //->where('Produce', '=', 'Produce')->sum('quantity')
+       ->get(); 
+       //return $productions;
+       
         return view('detailedProduction');
     }
 }
