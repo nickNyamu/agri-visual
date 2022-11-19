@@ -8,7 +8,8 @@
         <a class="nav-link" href="{{ route('user.adduser')}}">Add User</a>
       </li>
     </ul>
-    <table class="table table-hover mt-3">
+    <div  class="card-body table-responsive " style="height: 580px;">
+      <table class="table table-head-fixed text-nowrap"> 
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -34,11 +35,12 @@
                     <td>{{ $user->role }}</td>
                     <td>
                         <a href="{{ "edituser/".$user['id'] }}" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                        <a href="{{ "deleteuser/".$user['id'] }}" class="btn btn-danger"><i class="fa fa-times"></i></a>
+                        {{-- <a href="{{ "deleteuser/".$user['id'] }}" class="btn btn-danger"><i class="fa fa-times"></i></a> --}}
                     </td>
                 </tr>
             </tbody>
         @endforeach
       </table>
+    </div>
  </div>
 @endsection

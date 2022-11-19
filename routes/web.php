@@ -8,6 +8,7 @@ use App\Http\Controllers\populationController;
 use App\Http\Controllers\productionController;
 use App\Http\Controllers\reportsController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\homeController;
 
 
 /*
@@ -27,18 +28,12 @@ use App\Http\Controllers\dashboardController;
 Route::get('/', function () {
     return view('home');
 });
-/*Route::get('/AdminLogin', function () {
-    return view('admin.login');
-});
-/*Route::get('/ManagersLogin', function () {
-    return view('managers.login');
-});/*
-/*Route::get('/AdminDashboard', function () {
-    return view('admin.dashboard');
-});
-Route::get('/ManagersDashboard', function () {
-    return view('managers.dashboard');
-});*/
+
+Route::get('hProduces',[homeController::class, 'produces'])->name('hProduces');
+Route::get('hProduction',[homeController::class, 'productions'])->name('hProduction');
+Route::get('hReports',[homeController::class, 'reports'])->name('hReports');
+
+
 
 Route::prefix('user')->name('user.')->group(function(){
 
@@ -59,7 +54,9 @@ Route::prefix('user')->name('user.')->group(function(){
         Route::get('/performance1', [produceController::class, 'multiply1'])->name('performance1');
         Route::get('/performance2', [produceController::class, 'multiply2'])->name('performance2');
         Route::get('/performance3', [produceController::class, 'multiply3'])->name('performance3');
-        Route::get('/detailedProduction', [produceController::class, 'producee'])->name('detailedProduction');
+        Route::get('/detailedProduction', [produceController::class, 'produces'])->name('detailedProduction');
+        Route::get('/detailedProduction/{id}', [produceController::class, 'detailedProduction'])->name('detailedProductionn');
+        Route::get('/updateProduction', [produceController::class, 'updateProduction'])->name('updateProduction');
         Route::get('/viewUser', [UserController::class, 'showUsers'])->name('viewUser');
         Route::post('/createUser', [UserController::class, 'create'])->name('createUser');
         Route::view('/addregion', 'region')->name('addregion');

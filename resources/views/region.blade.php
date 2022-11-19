@@ -17,12 +17,12 @@
                 @csrf
                 <div class="form-group ml-3 mr-3">
                     <label for="county" class="form-label">County</label>
-                    <input type="text" name="county" class="form-control" value="{{ old ('county')}}">
+                    <input type="text" name="county" class="form-control" placeholder="e.g Nakuru" value="{{ old ('county')}}">
                     <span class="text-danger">@error('county'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group ml-3 mr-3">
                     <label for="area" class="form-label">Area</label>
-                    <input type="text" name="area" class="form-control" value="{{ old ('area')}}">
+                    <input type="text" name="area" placeholder="10,000" class="form-control" value="{{ old ('area')}}">
                     <span class="text-danger">@error('area'){{ $message }}@enderror</span>
                 </div>
                 <div class="form-group ml-3 mr-3 mb-3">

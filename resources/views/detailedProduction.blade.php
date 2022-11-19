@@ -8,26 +8,6 @@
     <div>      
         <ul class="user nav ml-3">
           <div>
-          <li class="nav-item">
-            <a class="nav-link active" href=" ">2019</a>
-          </li>
-        </div>
-        <div>
-          <li class="nav-item">
-            <a class="nav-link" href=" ">2020</a>
-          </li>
-        </div>
-        <div>
-            <li class="nav-item">
-              <a class="nav-link" href=" ">2021</a>
-            </li>
-          </div>
-          <div>
-            <li class="nav-item">
-              <a class="nav-link" href=" ">2022</a>
-            </li>
-          </div>
-          <div>
             <li class="nav-item">
               <a class="nav-link" href="{{ route('user.viewProduction') }}">View Production</a>
             </li>
@@ -45,22 +25,19 @@
                 <tr>
                     <th>#</th>
                     <th>Produce</th>
-                    <th>Year</th>
-                    <th>Actual Production(Kgs)</th>
-                    <th>Required Production(Kg)</th>
-                    <th>Difference</th>
+                    <th>Action</th>
                 </tr>
             </thead>
-
+  @foreach ($produces as $produce)
             <tbody> 
-                <td>1</td>   
-                <td>ggg</td>
-                <td>2019</td>
-                <td>452224</td>
-                <td>4646464</td>
-                <td>575</td>
+                <td>{{ ++$i }}</td>
+                <td>{{ $produce->name }}</td>   
+                
+                  
+                <td><a href="{{ "detailedProduction/".$produce['id'] }}" class="btn btn-warning"><i class="fa fa-pencil">View Detailed Data</i></a></td>
+                    
             </tbody>
-            
+  @endforeach
         </table>
         </div>
     </div>

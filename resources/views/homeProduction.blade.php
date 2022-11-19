@@ -22,60 +22,41 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="loginnavbar">
-                <a class="navbar-brand ml-5" href="#">Agri-Visual</a> 
+                <a class="navbar-brand ml-5" href="">Agri-Visual</a> 
             </div>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#" style="color:black;">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/" style="color:rgb(95, 95, 95);">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('hProduces') }}" style="color:rgb(95, 95, 95);">Produces</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:rgb(95, 95, 95);">Production</a>
+                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:black;">Production</a>
               </li>
                 <li class="nav-item">
                     <a class="nav-link mr-2" href="{{ route('hReports') }}" style="color:rgb(95, 95, 95);">Reports</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                  
                 <a class="nav-link mr-2 btn btn-outline-secondary mr-3" href="{{ route('user.login') }}" style="color:black;">Login</a>
                 
-              </li>
+              </li> --}}
             </ul> 
         </nav>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-    <div class="carousel-inner border border-secondary mt-2  ">
-      <div class="carousel-item active ">
-        <img class="d-block w-100" src="/img/slide1.jpg" alt="First slide" style="height: 650px;">
-      </div>
-
-      <div class="carousel-item ">
-        <img class="d-block w-100" src="/img/slide2.jpg" alt="Second slide" style="height: 650px;">
-      </div>
-
-      <div class="carousel-item">
-        <img class="d-block w-100" src="/img/slide3.jpg" alt="Third slide" style="height: 650px;">
-      </div>
-
+<div class="row mt-2 ml-4">
+    <h5>Production Level</h5>
+</div>
+<div class="row mt-2">
+    <div class="col-lg-12" style="padding: 0 60px 0 60px;">
+        <p>Kenya is broadly self sufficient in major food items except in drought years. 
+            Chronic vulnerability to drought is concentrated in the ASAL areas.
+             Up to 5 million people in these areas are vulnerable and require humanitarian assistance from time to time. Special attention is given to these areas in terms of specific projects, which include provision of water for domestic use and for livestock and preservation of traditional drought management systems, 
+             in addition to the utilization of drought-tolerant crop varieties and rearing of drought
+              –adapted livestock breeds.</p>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-  </div>
-        
-       
-        
+
+               
     <script src="{{ asset('js/style.js') }}" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

@@ -42,6 +42,25 @@
         <div class="sidebar">
             <div class="logo_content">
             <span class="proj_name mt-2">Agri-Visual</span>
+             @if(Auth::user()->role == 'Inactive')
+             <ul class="nav_list">
+                <li>
+                    <a href="{{ route('user.home') }}">
+                    <i class='bx bx-home' ></i>
+                    <span class="links_name">Home</span>
+                    </a>
+                    <span class="tooltip">Home</span>
+                </li>
+                <li>
+                    <a href="{{ route('user.logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();"> 
+                    <i class='bx bx-log-out' ></i>
+                    <span class="links_name">Logout</span></a>
+                    <form action="{{ route('user.logout') }}" method="post" class="d-none" id="logout-form">@csrf</form>
+                    <span class="tooltip">Logout</span>
+                </li>
+             </ul>
+             @endif
+
                 @if(Auth::user()->role == 'Manager')
                     <ul class="nav_list">
                         <li>
@@ -51,16 +70,16 @@
                             </a>
                             <span class="tooltip">Home</span>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('user.analytics') }}">
                             <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Analytics</span>
                             </a>
                             <span class="tooltip">Analytics</span>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{ route('user.performance') }}">
-                                <i class='bx bxs-cog'></i>
+                             <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Performance</span>
                             </a>
                             <span class="tooltip">Performance</span>
@@ -120,16 +139,16 @@
                             </a>
                             <span class="tooltip">Home</span>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('user.analytics') }}">
                             <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Analytics</span>
                             </a>
                             <span class="tooltip">Analytics</span>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{ route('user.performance') }}">
-                                <i class='bx bxs-cog'></i>
+                                <i class='bx bx-bar-chart-alt-2' ></i>
                             <span class="links_name">Performance</span>
                             </a>
                             <span class="tooltip">Performance</span>

@@ -22,24 +22,23 @@ class dashboardController extends Controller
         $year2Sum = DB::table("populations")->where("year",">=","2020-1-1")->where("year","<=","2020-12-31")->sum("population");
         $year3Sum = DB::table("populations")->where("year",">=","2021-1-1")->where("year","<=","2021-12-31")->sum("population");
         $year4Sum = DB::table("populations")->where("year",">=","2022-1-1")->where("year","<=","2022-12-31")->sum("population");
-        //$year1Sum = Population::where("year", "=" ,"2019.%.%")->sum("population");
-        //return $year1Sum;
 
         $chart = new ProductionChart;
         $chart->labels(['2019', '2020', '2021', '2022']);
-        $chart->dataset('Year', 'bar', [$year1Sum, $year2Sum, $year3Sum, $year4Sum]);
+        $chart->dataset('Year', 'bar', [$year1Sum, $year2Sum, $year3Sum, $year4Sum])->backgroundColor('#FF6384');
 
 
         $managers = User::where('role','=','Manager')->count();
         $admins = User::where('role','=','Admin')->count();
+        $county = Region::count();
         //Pie Chart
         $chart2 = new usersChart;
-        $chart2->labels(['Manager','Admin']);
-        $chart2->dataset('Year', 'pie', [ $managers, $admins]);
+        $chart2->labels(['Admin','Manager']);
+        $chart2->dataset('Year', 'pie', [$admins, $managers])->backgroundColor(["#FF6384", "#36A2EB"]);
 
         $users = User::All()->count();
         
         $produce = Produce::All()->count();
-        return view('dashboard', compact('chart','chart2','users','produce'));
+        return view('dashboard', compact('chart','chart2','users','produce','county'));
     }
 }

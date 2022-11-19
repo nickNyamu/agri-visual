@@ -73,6 +73,7 @@
                    
                        <option>Admin</option>
                        <option>Manager</option>
+                       <option>Inactive</option>
                        </select>
                        <span class="text-danger">@error('role'){{ $message }}@enderror</span>
                    </div>
