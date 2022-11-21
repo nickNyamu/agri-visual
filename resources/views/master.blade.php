@@ -84,7 +84,7 @@
                             </a>
                             <span class="tooltip">Performance</span>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="{{ route('user.addregion') }}">
                             <i class='bx bx-map' ></i>
                             <span class="links_name">Region</span>
@@ -97,10 +97,10 @@
                             <span class="links_name">Produce</span>
                             </a>
                             <span class="tooltip">Produce</span>
-                        </li>
+                        </li> --}}
                         <li>
                             <a href="{{ route('user.addPopulation') }}">
-                            <i class='bx bx-user'></i>
+                                <i class='bx bxs-city'></i>
                             <span class="links_name">Population</span>
                             </a>
                             <span class="tooltip">Population</span>

@@ -31,6 +31,10 @@ Route::get('/', function () {
 
 Route::get('hProduces',[homeController::class, 'produces'])->name('hProduces');
 Route::get('hProduction',[homeController::class, 'productions'])->name('hProduction');
+Route::get('hProduction/{id}',[homeController::class, 'detailedProduction'])->name('hProductionn');
+Route::get('hRegions',[homeController::class, 'regions'])->name('hRegions');
+Route::get('hRegions/{id}',[homeController::class, 'regionss'])->name('hRegionss');
+Route::get('hregion',[homeController::class, 'homeregion'])->name('hregion');
 Route::get('hReports',[homeController::class, 'reports'])->name('hReports');
 
 

@@ -25,7 +25,7 @@ class dashboardController extends Controller
 
         $chart = new ProductionChart;
         $chart->labels(['2019', '2020', '2021', '2022']);
-        $chart->dataset('Year', 'bar', [$year1Sum, $year2Sum, $year3Sum, $year4Sum])->backgroundColor('#FF6384');
+        $chart->dataset('Population', 'bar', [$year1Sum, $year2Sum, $year3Sum, $year4Sum])->backgroundColor('#FF6384');
 
 
         $managers = User::where('role','=','Manager')->count();
@@ -38,7 +38,8 @@ class dashboardController extends Controller
 
         $users = User::All()->count();
         
+        $productions = Production::All()->count();
         $produce = Produce::All()->count();
-        return view('dashboard', compact('chart','chart2','users','produce','county'));
+        return view('dashboard', compact('chart','chart2','users','produce','county','productions'));
     }
 }

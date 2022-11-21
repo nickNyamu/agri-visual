@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title> Agri-Visual </title>
+        <title style="color:black;"> Agri-Visual </title>
         <link rel="stylesheet"  href="{{ asset('css/style.css') }}">
             <!-- Bootstrap CSS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -26,22 +26,16 @@
             </div>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/" style="color:rgb(95, 95, 95);">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/" style="color:rgb(112, 112, 112);">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('hProduces') }}" style="color:rgb(95, 95, 95);">Produces</a>
+                    <a class="nav-link" href="{{ route('hProduces') }}" style="color:rgb(112, 112, 112);">Produces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('hRegions') }}" style="color:rgb(112, 112, 112);">Regions</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('hProduction') }}" style="color:black;">Production</a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-2" href="{{ route('hReports') }}" style="color:rgb(95, 95, 95);">Reports</a>
-                </li>
-                {{-- <li class="nav-item">
-                 
-                <a class="nav-link mr-2 btn btn-outline-secondary mr-3" href="{{ route('user.login') }}" style="color:black;">Login</a>
-                
-              </li> --}}
             </ul> 
         </nav>
 <div class="row mt-2 ml-4">
@@ -55,7 +49,34 @@
              in addition to the utilization of drought-tolerant crop varieties and rearing of drought
               –adapted livestock breeds.</p>
     </div>
+    <h5 class="ml-5">Detailed Production Quantity</h5>
 
+    <div class="row ml-5"> 
+        <div class="col-9 mt-3">
+            <div  class="card-body table-responsive " style="height: 480px;">
+                <table class="table table-head-fixed text-nowrap"> 
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Produce</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+      @foreach ($produces as $produce)
+                <tbody> 
+                    <td>{{ ++$i }}</td>
+                    <td>{{ $produce->name }}</td>   
+                    
+                      
+                    <td><a href="{{ "hProduction/".$produce['id'] }}" class="btn btn-warning"><i class="fa fa-pencil">View Detailed Data</i></a></td>
+                        
+                </tbody>
+      @endforeach
+            </table>
+            </div>
+        </div>
+        </div>  
+    </div>
                
     <script src="{{ asset('js/style.js') }}" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

@@ -11,7 +11,7 @@
    @if (Auth::user()->role == 'Manager')
  <div class="main">
 
-      <h5>Admin Dashboard</h5>
+      <h5>Manager Dashboard</h5>
       <div class="cardviews">
             <div class="val-box shadow p-3">
                <i class="fas fa-users"></i>
@@ -37,8 +37,8 @@
             <div class="val-box shadow p-3">
                <i class="fas fa-users"></i>
                   <div>
-                     <h3>8,267</h3>
-                     <span>New Users</span>
+                     <h3>{{ $productions }}</h3>
+                     <span>Production Entries</span>
                   </div>
             </div>
       </div>
@@ -109,10 +109,10 @@
             </div>
             <div class="val-box shadow p-3">
                <i class="fas fa-users"></i>
-                  <div>
-                     <h3>8,267</h3>
-                     <span>New Users</span>
-                  </div>
+               <div>
+                  <h3>{{ $productions }}</h3>
+                  <span>Production Entries</span>
+               </div>
             </div>
       </div>
    </div>

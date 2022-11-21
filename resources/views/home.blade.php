@@ -29,13 +29,13 @@
                     <a class="nav-link active" aria-current="page" href="#" style="color:black;">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('hProduces') }}" style="color:rgb(95, 95, 95);">Produces</a>
+                    <a class="nav-link" href="{{ route('hProduces') }}" style="color:rgb(112, 112, 112);">Produces</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:rgb(95, 95, 95);">Production</a>
-              </li>
+                  <a class="nav-link" href="{{ route('hRegions') }}" style="color:rgb(112, 112, 112);">Regions</a>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-2" href="{{ route('hReports') }}" style="color:rgb(95, 95, 95);">Reports</a>
+                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:rgb(112, 112, 112);">Production</a>
                 </li>
                 <li class="nav-item">
                  

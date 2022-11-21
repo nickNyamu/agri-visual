@@ -122,7 +122,7 @@ class produceController extends Controller
  
         $chart3 = new detailedChart;
         $chart3->labels(['2019', '2020', '2021', '2022', '2023']);
-        $chart3->dataset('Year', 'bar', [$productions19, $productions20, $productions21, $productions22, $productions23])->backgroundColor('#FF6384');
+        $chart3->dataset('Production', 'bar', [$productions19, $productions20, $productions21, $productions22, $productions23])->backgroundColor('#FF6384');
 
         return view('detailedData', compact('productions22', 'productions21', 'productions20',
          'productions19','year1Sum', 'year2Sum','year3Sum','year4Sum', 'produce','chart3'));

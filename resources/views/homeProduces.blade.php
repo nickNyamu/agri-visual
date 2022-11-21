@@ -26,22 +26,16 @@
             </div>
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/" style="color:rgb(95, 95, 95);">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/" style="color:rgb(112, 112, 112);">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('hProduces') }}" style="color:black;">Produces</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:rgb(95, 95, 95);">Production</a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link mr-2" href="{{ route('hReports') }}" style="color:rgb(95, 95, 95);">Reports</a>
+                    <a class="nav-link" href="{{ route('hRegions') }}" style="color:rgb(112, 112, 112);">Regions</a>
                 </li>
-                {{-- <li class="nav-item">
-                 
-                <a class="nav-link mr-2 btn btn-outline-secondary mr-3" href="{{ route('user.login') }}" style="color:black;">Login</a>
-                
-              </li> --}}
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('hProduction') }}" style="color:rgb(112, 112, 112);">Production</a>
             </ul> 
         </nav>
 <div class="row mt-2 ml-4">
@@ -57,7 +51,9 @@
     </div>
     <div class="row ">
         <div class="col-lg-4 mt-5" style="padding: 0 60px 0 60px;">
-            <p>These are some of the agricultural produces captured within the system</p>
+            <p>These are some of the agricultural produces captured within the system. These Produces 
+                are cultivated by the average Kenyan.
+            </p>
         </div>
         <div class="col-lg-8" >
             <h5>Produces in the system</h5>

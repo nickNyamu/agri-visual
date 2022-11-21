@@ -38,22 +38,16 @@
                 <a class="nav-link" href="{{ route('hRegions') }}" style="color:rgb(112, 112, 112);">Regions</a>
             </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-2" href=" " style="color:black;">Reports</a>
+                    <a class="nav-link mr-2" href=" " style="color:black;">Region Reports</a>
                 </li>
-                {{-- <li class="nav-item">
-                 
-                <a class="nav-link mr-2 btn btn-outline-secondary mr-3" href="{{ route('user.login') }}" style="color:black;">Login</a>
-                
-              </li> --}}
             </ul> 
         </nav>
-        <h5 class="ml-3 mt-3">Detailed Data for {{ $produce->name }}</h5>
-
+        <h4 class="ml-3 mt-3">Region Data for {{ $region->county }}</h4>
         <div>      
             <ul class="user nav ml-3 mt-3">
               <div>
                 <li class="nav-item">
-                  <a class="nav-link " href="{{ route('hProduction') }}">Back</a>
+                  <a class="nav-link " href="{{ route('hRegions') }}">Back</a>
                 </li>
               </div>
             </ul>
@@ -63,12 +57,12 @@
             <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header border-0">
-                           <h5 class="card-title">{{ $produce->name }} Production Quantity Chart</h5>
+                           <h5 class="card-title"> {{ $region->county }} County Production Chart</h5>
             
                            <div class="card-body">
                               <div class="position-relative" id="barChart">
-                                 {!! $chart4->container() !!}
-                                 {!! $chart4->script() !!}
+                                 {!! $chart5->container() !!}
+                                 {!! $chart5->script() !!}
                               </div>
                            </div>
                         </div>
@@ -81,39 +75,35 @@
                     <thead>
                         <tr>
                             <th>Year</th>
-                            <th>Produced Quantity(kgs)</th>
-                            <th>Required Quantity(kgs)</th>
-                            <th>Deficit/Surplus</th>
+                            <th>County</th>
+                            <th>Total County Production(kgs)</th>
                         </tr>
                     </thead>
                     
                     <tbody> 
                         <td>2022</td>
-                        <td>{{  number_format(floatval($productions22)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year4Sum)) }}</td>
-                        <td>{{ number_format(floatval($productions22 -  $produce->description * $year4Sum)) }}</td>
+                        <td>{{ $region->county }}</td>   
+                        <td>{{ number_format(floatval($county22)) }}</td>
                     </tbody>
                     <tbody> 
                         <td>2021</td>
-                        <td>{{  number_format(floatval($productions21)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year3Sum))}}</td>
-                        <td>{{ number_format(floatval($productions21 -  $produce->description * $year3Sum))}}</td>
+                        <td>{{ $region->county }}</td>   
+                        <td>{{ number_format(floatval($county21))}}</td>
                     </tbody>
                     <tbody> 
                         <td>2020</td>
-                        <td>{{  number_format(floatval($productions20)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year2Sum))}}</td>
-                        <td>{{ number_format(floatval($productions20 -  $produce->description * $year2Sum))}}</td>
+                        <td>{{ $region->county }}</td>   
+                        <td>{{ number_format(floatval($county20))}}</td>
                     </tbody>
                     <tbody> 
                         <td>2019</td>
-                        <td>{{  number_format(floatval($productions19)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year1Sum))}}</td>
-                        <td>{{ number_format(floatval($productions19 -  $produce->description * $year1Sum))}}</td>
+                        <td>{{ $region->county }}</td>   
+                        <td>{{ number_format(floatval($county19))}}</td>
                     </tbody>
                 </table>
             </div>
         </div>
+
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>          
     <script src="{{ asset('js/style.js') }}" type="text/javascript"></script>
