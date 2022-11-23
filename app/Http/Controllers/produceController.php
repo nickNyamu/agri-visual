@@ -17,14 +17,14 @@ class produceController extends Controller
     //
     function create(Request $request){
         $request -> validate([
-            'name' => 'required',
+            'name' => 'required|unique:produces,name',
             'description' => 'required',
             'category' => 'required',
         ]);
         
         Produce::create($request->all());
 
-        return redirect()->route('user.addproduce');
+        return redirect()->back()->with('success','Produce added successfully!');
     }
     function showProduces(){
         $produces = Produce::all();

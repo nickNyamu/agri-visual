@@ -12,14 +12,14 @@ class regionController extends Controller
     //
     function create(Request $request){
         $request -> validate([
-            'county' => 'required',
+            'county' => 'required|unique:regions,county',
             'area' => 'required',
             'units' => 'required',
         ]);
         
         Region::create($request->all());
 
-        return redirect()->route('user.addregion');
+        return redirect()->back()->with('success','Region added successfully!');
     }
     function edit($id){
         $region = Region::find($id);

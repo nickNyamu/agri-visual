@@ -14,6 +14,16 @@
                <h3 class="sm-display-5">Add Details</h3>
            </div>
             <form action="{{ route('user.createPopulation') }}" method="POST">
+                @if (Session::get('success'))
+                <div class="alert alert-success alert-dismissible fade show">
+                    {{ Session::get('success') }}
+                </div>  
+                @endif
+                @if (Session::get('fail'))
+                <div class="alert alert-fail">
+                    {{ Session::get('fail') }}
+                </div>  
+                @endif
                 @csrf
                 <div class="form-group ml-3 mr-3">
                         <label for="county" class="form-label">County</label>

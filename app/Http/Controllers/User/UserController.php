@@ -18,13 +18,14 @@ class UserController extends Controller
     function edit($id){
         $user = User::find($id);
         return view('edituser', ['user' => $user]);
+        
     }
 
     function create(Request $request){
         $request -> validate([
             'fname' => 'required',
             'lname' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'nationalID' => 'required',
             'phone' => 'required',
             'county' => 'required',
@@ -35,7 +36,7 @@ class UserController extends Controller
         
         User::create($request->all());
 
-        return redirect()->route('user.adduser');
+        return redirect()->back()->with('success','User created successfully!');
     }
 
     function update(Request $request){

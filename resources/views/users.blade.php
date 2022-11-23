@@ -19,7 +19,7 @@
        </div>
        <form action="{{ route('user.createUser') }}" method="POST">
             @if (Session::get('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-success alert-dismissible fade show">
                 {{ Session::get('success') }}
             </div>  
             @endif

@@ -22,7 +22,7 @@ class PopulationController extends Controller
         
         Population::create($request->all());
         
-        return redirect()->route('user.addPopulation');
+        return redirect()->back()->with('success','Population added successfully!');
     }
 
     function showPopulation(){

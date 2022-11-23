@@ -26,7 +26,7 @@ class productionController extends Controller
         ]);
         Production::create($request->all()); 
        
-        return redirect()->route('user.addProduction');
+        return redirect()->back()->with('success','Production Level added successfully!');
     }
 
     function viewProduction(){

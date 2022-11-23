@@ -21,21 +21,21 @@
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bxs-leaf'></i>
                   <div>
                      <h3>{{ $produce }}</h3>
                      <span>Total Produce</span>
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bx-world'></i>
                   <div>
                      <h3>{{ $county }}</h3>
                      <span>Counties</span>
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bx-store'></i>
                   <div>
                      <h3>{{ $productions }}</h3>
                      <span>Production Entries</span>
@@ -94,21 +94,21 @@
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bxs-leaf'></i>
                   <div>
                      <h3>{{ $produce }}</h3>
                      <span>Total Produce</span>
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bx-world'></i>
                   <div>
                      <h3>{{ $county }}</h3>
                      <span>Counties</span>
                   </div>
             </div>
             <div class="val-box shadow p-3">
-               <i class="fas fa-users"></i>
+               <i class='bx bx-store'></i>
                <div>
                   <h3>{{ $productions }}</h3>
                   <span>Production Entries</span>

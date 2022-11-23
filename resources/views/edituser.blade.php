@@ -58,13 +58,13 @@
    
                    <div class="col-md-6">
                        <label for="phone" class="form-label">Phone No.</label>
-                       <input type="text" name="phone" id="phone" placeholder="071234567" class="form-control" value="{{ $user['county'] }}">
+                       <input type="text" name="phone" id="phone" placeholder="071234567" class="form-control" value="{{ $user['phone'] }}">
                        <span class="text-danger">@error('telNo'){{ $message }}@enderror</span>
                    </div>
    
                    <div class=" col-md-6">
                        <label for="county" class="form-label">County</label>
-                       <input type="text" name="county" id="county" placeholder="Bomet" class="form-control" value="{{ $user['phone'] }}">
+                       <input type="text" name="county" id="county" placeholder="Bomet" class="form-control" value="{{ $user['county'] }}">
                        <span class="text-danger">@error('county'){{ $message }}@enderror</span>
                    </div>   
 

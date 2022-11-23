@@ -30,11 +30,12 @@ class dashboardController extends Controller
 
         $managers = User::where('role','=','Manager')->count();
         $admins = User::where('role','=','Admin')->count();
+        $inactive = User::where('role','=','Inactive')->count();
         $county = Region::count();
         //Pie Chart
         $chart2 = new usersChart;
-        $chart2->labels(['Admin','Manager']);
-        $chart2->dataset('Year', 'pie', [$admins, $managers])->backgroundColor(["#FF6384", "#36A2EB"]);
+        $chart2->labels(['Admin','Manager','Inactive']);
+        $chart2->dataset('Year', 'pie', [$admins, $managers, $inactive])->backgroundColor(["#FF6384", "#36A2EB","#cc65fe"]);
 
         $users = User::All()->count();
         
