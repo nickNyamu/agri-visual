@@ -102,17 +102,17 @@ class produceController extends Controller
     }
     function detailedProduction($id){
         $produce = Produce::find($id);
-        $productions23 = Production::All()->where('produce_id', '=', $id)
+        $productions23 = Production::where('produce_id', '=', $id)
         ->where("year",">=","2023-1-1")->where("year","<=","2023-12-31")->sum('quantity');
-        $productions22 = Production::All()->where('produce_id', '=', $id)
+        $productions22 = Production::where('produce_id', '=', $id)
         ->where("year",">=","2022-1-1")->where("year","<=","2022-12-31")->sum('quantity');
-        $productions21 = Production::All()->where('produce_id', '=', $id)
+        $productions21 = Production::where('produce_id', '=', $id)
         ->where("year",">=","2021-1-1")->where("year","<=","2021-12-31")->sum('quantity');
-        $productions20 = Production::All()->where('produce_id', '=', $id)
+        $productions20 = Production::where('produce_id', '=', $id)
         ->where("year",">=","2020-1-1")->where("year","<=","2020-12-31")->sum('quantity');
-        $productions19 = Production::All()->where('produce_id', '=', $id)
+        $productions19 = Production::where('produce_id', '=', $id)
         ->where("year",">=","2019-1-1")->where("year","<=","2019-12-31")->sum('quantity');
-
+        
 
 
         $year1Sum = DB::table("populations")->where("year",">=","2019-1-1")->where("year","<=","2019-12-31")->sum("population");

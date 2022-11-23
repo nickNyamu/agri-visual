@@ -50,6 +50,6 @@ class productionController extends Controller
       function delete($id){
         $production = Production::find($id);
         $production->delete();
-        return redirect()->route('user.viewProduction');
+        return redirect()->route('user.viewProduction', compact('production'));
     }
 }

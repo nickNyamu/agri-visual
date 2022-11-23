@@ -50,7 +50,7 @@
                 <td>2019</td>
                 <td>{{  number_format(floatval($year1Sum)) }}</td>
                 <td>{{  number_format(floatval($produce->description *  $year1Sum)) }}</td>
-                <td>{{  number_format(floatval($produce->description *  $year1Sum  * 365))  }}</td>
+                <td>{{  number_format(floatval($produce->description *  $year1Sum  * 130))  }}</td>
             </tbody>
             @endforeach 
         </table>

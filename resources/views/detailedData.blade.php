@@ -44,26 +44,26 @@
                 <tbody> 
                     <td>2022</td>
                     <td>{{  number_format(floatval($productions22)) }}</td>   
-                    <td>{{ number_format(floatval($produce->description * $year4Sum * 365)) }}</td>
-                    <td>{{ number_format(floatval($productions22 -  $produce->description * $year4Sum * 365)) }}</td>
+                    <td>{{ number_format(floatval($produce->description * $year4Sum * 130)) }}</td>
+                    <td>{{ number_format(floatval($productions22 -  $produce->description * $year4Sum * 130)) }}</td>
                 </tbody>
                 <tbody> 
                     <td>2021</td>
                     <td>{{  number_format(floatval($productions21)) }}</td>   
-                    <td>{{ number_format(floatval($produce->description * $year3Sum * 365))}}</td>
-                    <td>{{ number_format(floatval($productions21 -  $produce->description * $year3Sum * 365))}}</td>
+                    <td>{{ number_format(floatval($produce->description * $year3Sum * 130))}}</td>
+                    <td>{{ number_format(floatval($productions21 -  $produce->description * $year3Sum * 130))}}</td>
                 </tbody>
                 <tbody> 
                     <td>2020</td>
                     <td>{{  number_format(floatval($productions20)) }}</td>   
-                    <td>{{ number_format(floatval($produce->description * $year2Sum* 365))}}</td>
-                    <td>{{ number_format(floatval($productions20 -  $produce->description * $year2Sum * 365))}}</td>
+                    <td>{{ number_format(floatval($produce->description * $year2Sum* 130))}}</td>
+                    <td>{{ number_format(floatval($productions20 -  $produce->description * $year2Sum * 130))}}</td>
                 </tbody>
                 <tbody> 
                     <td>2019</td>
                     <td>{{  number_format(floatval($productions19)) }}</td>   
-                    <td>{{ number_format(floatval($produce->description * $year1Sum * 365))}}</td>
-                    <td>{{ number_format(floatval($productions19 -  $produce->description * $year1Sum * 365))}}</td>
+                    <td>{{ number_format(floatval($produce->description * $year1Sum * 130))}}</td>
+                    <td>{{ number_format(floatval($productions19 -  $produce->description * $year1Sum * 130))}}</td>
                 </tbody>
             </table>
         </div>

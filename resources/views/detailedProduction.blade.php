@@ -34,7 +34,7 @@
                 <td>{{ $produce->name }}</td>   
                 
                   
-                <td><a href="{{ "detailedProduction/".$produce['id'] }}" class="btn btn-warning"><i class="fa fa-pencil">View Detailed Data</i></a></td>
+                <td><a href="{{ "detailedProduction/".$produce['id'] }}" class="btn btn-warning"><i class="fa fa-eye"></i></a></td>
                     
             </tbody>
   @endforeach

@@ -50,7 +50,7 @@
                 <td>2021</td>
                 <td>{{ number_format(floatval($year3Sum)) }}</td>
                 <td>{{ number_format(floatval($produce->description *  $year3Sum)) }}</td>
-                <td>{{ number_format(floatval($produce->description *  $year3Sum  * 365)) }}</td>
+                <td>{{ number_format(floatval($produce->description *  $year3Sum  * 130)) }}</td>
             </tbody>
             @endforeach 
         </table>
