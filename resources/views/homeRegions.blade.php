@@ -56,7 +56,7 @@
               <tr>
                   <td>{{ ++$i }}</td>
                   <td>{{ $region->county }}</td>
-                  <td><a href="{{ "hRegions/".$region['id'] }}" class="btn btn-warning"><i class="fa fa-pencil">Region Detailed Production</i></a></td>
+                  <td><a href="{{ "hRegions/".$region['id'] }}" class="btn btn-warning"><i class="fa fa-eye"></i></a></td>
               </tr>
           </tbody>
       @endforeach

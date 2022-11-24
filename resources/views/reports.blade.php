@@ -16,7 +16,7 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.print.min.js"></script>
 <div class="container box">
-    <h4 style="text-align: center;">Production Report</h4><br>
+    <h4 class="mt-2"style="text-align: center;">Production Report</h4><br>
     <div class="table-responsive">
 <table id="example" class="table table-striped table-hover table-bordered">
             

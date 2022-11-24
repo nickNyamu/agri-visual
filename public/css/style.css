@@ -124,7 +124,7 @@ body{
     width: 190px;
     font-size: 15px;
 }
-.sidebar ul li .tooltip{
+/* .sidebar ul li .tooltip{
     position: relative;
     left: 122px;
     color: #1f2441;
@@ -151,7 +151,7 @@ body{
     opacity: 1;
     transition: all 0.5s ease;
 
-}
+} */
 .sidebar ul li a{
     display: flex;
     margin-left: 0;

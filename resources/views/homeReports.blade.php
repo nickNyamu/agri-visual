@@ -90,31 +90,31 @@
                     <tbody> 
                         <td>2022</td>
                         <td>{{  number_format(floatval($productions22)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year4Sum)) }}</td>
-                        <td>{{ number_format(floatval($productions22 -  $produce->description * $year4Sum)) }}</td>
+                        <td>{{ number_format(floatval($produce->description * $year4Sum * 130)) }}</td>
+                        <td>{{ number_format(floatval($productions22 -  $produce->description * $year4Sum * 130)) }}</td>
                     </tbody>
                     <tbody> 
                         <td>2021</td>
                         <td>{{  number_format(floatval($productions21)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year3Sum))}}</td>
-                        <td>{{ number_format(floatval($productions21 -  $produce->description * $year3Sum))}}</td>
+                        <td>{{ number_format(floatval($produce->description * $year3Sum * 130))}}</td>
+                        <td>{{ number_format(floatval($productions21 -  $produce->description * $year3Sum * 130))}}</td>
                     </tbody>
                     <tbody> 
                         <td>2020</td>
                         <td>{{  number_format(floatval($productions20)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year2Sum))}}</td>
-                        <td>{{ number_format(floatval($productions20 -  $produce->description * $year2Sum))}}</td>
+                        <td>{{ number_format(floatval($produce->description * $year2Sum * 130))}}</td>
+                        <td>{{ number_format(floatval($productions20 -  $produce->description * $year2Sum * 130))}}</td>
                     </tbody>
                     <tbody> 
                         <td>2019</td>
                         <td>{{  number_format(floatval($productions19)) }}</td>   
-                        <td>{{ number_format(floatval($produce->description * $year1Sum))}}</td>
-                        <td>{{ number_format(floatval($productions19 -  $produce->description * $year1Sum))}}</td>
+                        <td>{{ number_format(floatval($produce->description * $year1Sum * 130))}}</td>
+                        <td>{{ number_format(floatval($productions19 -  $produce->description * $year1Sum * 130))}}</td>
                     </tbody>
                 </table>
             </div>
         </div>
-
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>          
     <script src="{{ asset('js/style.js') }}" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
